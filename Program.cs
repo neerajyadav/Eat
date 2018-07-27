@@ -11,7 +11,7 @@ namespace EatOrNot
             {
                 using (StreamReader reader = File.OpenText("input.txt"))
                 {
-                    Console.WriteLine("Start reading input text file....");
+                    Console.WriteLine("reading input text file....");
 
                     string[] content = reader.ReadToEnd().Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -46,7 +46,7 @@ namespace EatOrNot
                     int[] C = nutritionsArrays.Item1;
                     int[] P = nutritionsArrays.Item1;
                     int[] F = nutritionsArrays.Item1;
-                    
+
 
                 }
             }
