@@ -6,10 +6,7 @@ namespace EatOrNot
     class InputValidator : IInputValidator
     {
         private readonly string[] input;
-        public InputValidator(string[] _input)
-        {
-            input = _input;
-        }
+        public InputValidator(string[] _input) => input = _input;
 
         public bool AreNutritionsValid(int index)
         {
@@ -28,23 +25,29 @@ namespace EatOrNot
             return false;
         }
 
-        public bool IsNumberOfFruitsValid()
+        public bool IsNumberOfFruitsValid
         {
-            if (int.TryParse(input[1].Trim(), out int numberOfFruits))
+            get
             {
-                if (1 <= numberOfFruits && numberOfFruits <= 20)
-                    return true;
+                if (int.TryParse(input[1].Trim(), out int numberOfFruits))
+                {
+                    if (1 <= numberOfFruits && numberOfFruits <= 20)
+                        return true;
+                }
+                return false;
             }
-            return false;
         }
 
-        public bool IsNutritionsRowsPresentForEachFruit()
+        public bool IsNutritionsRowsPresentForEachFruit
         {
-            var numberOfFruits = Convert.ToInt32(input[1]);
-            if (input.Length == numberOfFruits + 2)
-                return true;
-            else
-                return false;
+            get
+            {
+                var numberOfFruits = Convert.ToInt32(input[1]);
+                if (input.Length == numberOfFruits + 2)
+                    return true;
+                else
+                    return false;
+            }
         }
     }
 }

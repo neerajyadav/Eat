@@ -5,10 +5,7 @@ namespace EatOrNot
 {
     class RowTransformer
     {
-        public static int[] ConvertToIntArray(string intput)
-        {
-            return intput.Split(' ').Select<string, int>(int.Parse).ToArray();
-        }
+        public static int[] ConvertToIntArray(string intput) => intput.Split(' ').Select<string, int>(int.Parse).ToArray();
 
         public static Tuple<int[], int[], int[], int[]> ConvertToNutritionsArrays(string[] intput)
         {
