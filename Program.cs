@@ -24,13 +24,13 @@ namespace EatOrNot
                         Console.WriteLine("Exiting application...");
                         goto exit;
                     }
-                    if (!validator.IsNumberOfFruitsValid())
+                    if (!validator.IsNumberOfFruitsValid)
                     {
                         Console.Error.WriteLine("Line 2: Fruits count is not valid. Fruits count should be between 1 to 20.");
                         Console.WriteLine("Exiting application...");
                         goto exit;
                     }
-                    if (!validator.IsNutritionsRowsPresentForEachFruit())
+                    if (!validator.IsNutritionsRowsPresentForEachFruit)
                     {
                         Console.Error.WriteLine("Line 2: Fruits count is not valid. Fruits count should be between 1 to 20.");
                         Console.WriteLine("Exiting application...");
